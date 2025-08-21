@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(){
+    int a; // Declare an integer variable
+    a=5; // Initialize the variable with a value
+
+    printf("%d",a); // Print the value of the variable
+    return 0;
+}
