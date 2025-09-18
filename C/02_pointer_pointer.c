@@ -12,3 +12,4 @@ int main() {
 // this ** and && can cancel each other
 // so **(&p) is same as *p
 // and &(*p) is same as p.
+ 
