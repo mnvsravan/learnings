@@ -11,3 +11,4 @@ int main() {
     return 0;
 } // here the value increases by 4 cuz this is arrays btyes sspace storage so it not inc by only 1 
  // like if we use char it increase by only 1 
+ 
