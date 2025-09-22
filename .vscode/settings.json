@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "02_QUIZZ.C": "cpp"
+        "02_QUIZZ.C": "cpp",
+        "01_PROBLEM.C": "cpp"
     }
 }
