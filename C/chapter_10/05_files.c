@@ -35,4 +35,42 @@ int main()
 
     return 0;  
     // Returns 0 from the main function, indicating successful execution.
-}
+} // for using FOR LOOP
+ //#include <stdio.h>  
+// Includes the standard input-output library, necessary for functions like printf, fopen, fgetc, etc.
+
+//int main()  
+// Entry point of the C program. Execution starts from here.
+//{
+  //  int ch;  
+    // Use int instead of char, because fgetc() returns int to properly handle EOF (-1).
+//
+ //  FILE *ptr;  
+  //  // Declares a pointer 'ptr' to a FILE object, used to refer to the file.
+
+    //ptr = fopen("harry.txt", "r");  
+    // Opens the file "harry.txt" in read mode ("r").
+    // If the file cannot be opened, 'ptr' will be NULL.
+
+    //if (ptr == NULL) {
+       // printf("File could not be opened.\n");
+       // return 1;  
+        // Exit with an error code if file opening fails.
+   // }
+
+    // Use a for loop to read until EOF
+   // for (ch = fgetc(ptr); ch != EOF; ch = fgetc(ptr))  
+    //{
+      //  printf("%c", ch);  
+        // Prints the character read from the file.
+    //}
+
+    //fclose(ptr);  
+    // Close the file after reading to free system resources.
+
+    //return 0;  
+    // Return 0 to indicate successful execution.
+///}
+//he first fgetc(ptr) → initializes ch before the loop begins.
+
+//The second fgetc(ptr) → fetches the next character at the end of each iteration
