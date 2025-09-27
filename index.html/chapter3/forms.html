@@ -1,0 +1,177 @@
+<!DOCTYPE html> <!-- Declares the document type and version of HTML being used (HTML5 here) -->
+<html lang="en"> <!-- Root element of the HTML document, with language set to English -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Sets the character encoding to UTF-8 (supports all characters/symbols) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ensures responsive design on all devices -->
+    <title>Document</title> <!-- Title of the webpage (shown in browser tab) -->
+</head>
+
+<body> <!-- Body contains the visible content of the webpage -->
+
+    <h1>Forms in HTML</h1> <!-- Main heading of the page -->
+
+    <!-- Form starts here, action tells where the data should be sent when submitted -->
+    <form action="/submit.php">
+
+        <!-- First input field (Name) -->
+        <div> <!-- Grouping container for better structure -->
+            <!-- Label for input, 'for="name"' links the label to the input with id="name" -->
+            <label for="name">Name</label>
+
+            <!-- Input field for name entry -->
+            <!-- id="name" connects with the label -->
+            <!-- type="text" means normal single-line text box -->
+            <!-- placeholder shows hint text inside input field -->
+            <input id="name" type="text" placeholder="Enter Name">
+        </div>
+
+        <!-- Second input field (Phone) -->
+        <div>
+            <!-- Label linked with input (id="ph") -->
+            <label for="ph">Phone</label>
+
+            <!-- Input field for phone number -->
+            <!-- id="ph" connects label to this field -->
+            <!-- type="phone" is incorrect, it should be type="tel" for phone numbers -->
+            <!-- placeholder displays example text -->
+            <input id="ph" type="tel" placeholder="Enter Phone">
+        </div>
+        <!-- Email input -->
+        <div> <!-- Container for the email input field -->
+
+            <!-- Label for the email input -->
+            <!-- 'for="email"' connects this label to the input with id="email" -->
+            <label for="email">Email</label>
+
+            <!-- Input field for email entry -->
+            <!-- id="email" uniquely identifies the field -->
+            <!-- type="email" ensures the user enters a valid email format (like user@example.com) -->
+            <!-- placeholder shows hint text inside the input box -->
+            <!-- required makes this field mandatory before form submission -->
+            <input id="email" type="email" placeholder="Enter Email" required>
+        </div>
+
+
+        <!-- Password input -->
+        <div> <!-- Container for the password input field -->
+
+            <!-- Label for the password input -->
+            <!-- 'for="password"' links the label to input with id="password" -->
+            <label for="password">Password</label>
+
+            <!-- Input field for password entry -->
+            <!-- id="password" uniquely identifies this field -->
+            <!-- type="password" hides the characters entered (replaces them with • or *) -->
+            <!-- placeholder gives a hint for expected input -->
+            <!-- required ensures user cannot leave this empty -->
+            <input id="password" type="password" placeholder="Enter Password" required>
+        </div>
+
+
+        <!-- Date input -->
+        <div> <!-- Container for the date of birth input field -->
+
+            <!-- Label for the date of birth -->
+            <!-- 'for="dob"' links to input with id="dob" -->
+            <label for="dob">Date of Birth</label>
+
+            <!-- Input field for date selection -->
+            <!-- id="dob" uniquely identifies this input -->
+            <!-- type="date" opens a date picker (calendar) for user convenience -->
+            <input id="dob" type="date">
+        </div>
+        <!-- Container div for the dropdown -->
+        <div>
+
+            <!-- Label element associated with the dropdown using the "for" attribute -->
+            <!-- The "for" attribute should match the id of the corresponding select element -->
+            <label for="gender">Gender</label>
+
+            <!-- The select element creates a dropdown list -->
+            <!-- The id "gender" links it with the above label -->
+            <!-- The "required" attribute makes it mandatory to choose a value before form submission -->
+            <select id="gender" required>
+
+                <!-- Placeholder option that is shown by default -->
+                <!-- value="" means it doesn't represent a valid choice -->
+                <!-- disabled makes it unselectable once the user chooses something else -->
+                <!-- selected makes it the default selected option -->
+                <option value="" disabled selected>Select Gender</option>
+
+                <!-- Valid selectable option representing "Male" -->
+                <option value="male">Male</option>
+
+                <!-- Valid selectable option representing "Female" -->
+                <option value="female">Female</option>
+
+                <!-- Valid selectable option representing a gender outside the binary -->
+                <option value="other">Other</option>
+
+            </select>
+
+        </div>
+        <!-- Radio buttons for Subscription Plan -->
+        <div>
+            <!-- Group heading for the subscription options -->
+            <p>Subscription Plan</p>
+
+            <!-- Option 1: Basic Plan -->
+            <!-- The label comes before the input, and is linked via the 'for' attribute -->
+            <label for="basic">Basic</label>
+            <!-- Radio button input for Basic plan -->
+            <!-- 'id' must match the label's 'for' to associate them -->
+            <!-- 'name' groups all radio buttons so only one can be selected -->
+            <!-- 'value' is what will be submitted with the form if selected -->
+            <input id="basic" type="radio" name="subscription" value="basic">
+
+            <!-- Option 2: Premium Plan -->
+            <label for="premium">Premium</label>
+            <input id="premium" type="radio" name="subscription" value="premium">
+
+            <!-- Option 3: VIP Plan -->
+            <label for="vip">VIP</label>
+            <input id="vip" type="radio" name="subscription" value="vip">
+        </div>
+
+        <!-- Checkbox for agreeing to terms -->
+        <div>
+            <!-- Label for the checkbox placed before the input -->
+            <!-- 'for' attribute links this label to the input with id 'terms' -->
+            <label for="terms">I agree to the terms and conditions</label>
+            <!-- Checkbox input -->
+            <!-- 'id' links it with the label above -->
+            <!-- 'required' ensures the user must check this box before submitting the form -->
+            <input id="terms" type="checkbox" required>
+        </div>
+        <!-- Container div for the comment section -->
+        <div>
+            <!-- Label element describing the purpose of the textarea below -->
+            <!-- 'for="comments"' links this label to the textarea with id="comments" -->
+            <!-- This improves accessibility (screen readers, focus when clicking the label) -->
+            <label for="comments">Comments</label>
+
+            <!-- Textarea input field for user to enter multiple lines of text -->
+            <!-- 'id="comments"' must match the label's 'for' attribute -->
+            <!-- 'placeholder' shows light gray text inside the box to guide the user -->
+            <!-- 'rows="4"' defines the height (number of visible text lines) -->
+            <textarea id="comments" placeholder="Enter your comments" rows="4"></textarea>
+        </div>
+
+        <!-- Container div for the submit button -->
+        <div>
+            <!-- Submit button that sends form data when clicked -->
+            <!-- 'type="submit"' specifies it's a submit button -->
+            <button type="submit">Submit</button>
+        </div>
+
+
+
+
+
+    </form> <!-- End of form -->
+
+</body>
+
+</html>
