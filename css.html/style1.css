@@ -1,0 +1,22 @@
+*{
+    color:chocolate;
+}
+
+h1{
+    color:burlywood;
+}
+
+#fuckyou{
+    color:aqua;
+}
+ 
+/* we use class for grping */
+.grping{
+    color:darkgray;
+}
+
+
+
+
+
+/* now if we do some changes and keep new colors in between like inline and etc the lastest ones gets registered  */

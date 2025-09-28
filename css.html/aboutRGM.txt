@@ -1,0 +1,15 @@
+like RGB stands for red green and blue 
+it is rep by rgb(number,number,number)
+this number lies from 0 -255
+we get colour cobination like yellow white etc and all by mixing these colours 
+like if its (255,0,0) it is red and remaing etc
+use color picker in google for better undersdtadning
+similarly
+
+
+we have HEX system 
+it is represented by #ff0000 etc
+here the ff are the 0-9 and letters from A-F 
+LIKE RED IS #FF0000 etc 
+and also the colours are excuted in order like if u keep style and css and again inline colour then the inline gets executed cuz its the latest ones
+etc

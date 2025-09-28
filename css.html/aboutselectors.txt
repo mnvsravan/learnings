@@ -1,0 +1,79 @@
+Universal Selector (*)
+
+Selects all elements on the page.
+
+Example: * { margin: 0; padding: 0; }
+
+Type Selector (Element Selector)
+
+Selects elements by their HTML tag name.
+
+Example: p { color: blue; }
+
+Class Selector (.classname)
+
+Selects all elements with a specific class.
+
+Example: .red { color: red; }
+
+ID Selector (#idname)
+
+Selects a single element with a unique ID.
+
+Example: #header { font-size: 40px; }
+
+Group Selector (,)
+
+Groups multiple selectors to apply the same style.
+
+Example: h1, h2, p { font-family: Arial; }
+
+Descendant Selector (space)
+
+Selects elements inside another element.
+
+Example: div p { color: green; }
+
+Child Selector (>)
+
+Selects only direct child elements.
+
+Example: div > p { color: orange; }
+
+Adjacent Sibling Selector (+)
+
+Selects the element immediately after another.
+
+Example: h1 + p { color: purple; }
+
+General Sibling Selector (~)
+
+Selects all siblings after another element.
+
+Example: h1 ~ p { color: gray; }
+
+Attribute Selectors
+
+Selects elements based on attributes.
+
+Example: input[type="text"] { border: 1px solid black; }
+
+Pseudo-classes
+
+Select elements in a particular state.
+
+Examples:
+
+a:hover { color: blue; }
+
+p:first-child { font-weight: bold; }
+
+Pseudo-elements
+
+Style specific parts of an element.
+
+Examples:
+
+p::first-line { font-weight: bold; }
+
+p::before { content: "👉 "; }
