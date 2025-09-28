@@ -1,0 +1,7 @@
+#outter{
+    font-size: 50px;
+}
+#inner{
+    font-size: 60px;
+}
+/* but since the inner div is in the ouuter div the font size becomes 50 and 60 cuz we changed it */
