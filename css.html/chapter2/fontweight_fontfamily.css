@@ -1,0 +1,14 @@
+#ok{
+    font-weight: bold;
+}
+#box{
+    font-weight: lighter;
+}
+/* we can very the weight from 100-900 */
+#bro{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#sis{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* the order follows the prioprity of font family */
