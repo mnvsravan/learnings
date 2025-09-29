@@ -1,0 +1,43 @@
+1. Width
+
+Defines how wide the content box of an element is.
+
+Example:
+
+div { width: 200px; }
+
+2. Height
+
+Defines how tall the content box of an element is.
+
+Example:
+
+div { height: 100px; }
+
+3. Padding
+
+The space between the content and the border of an element.
+
+It adds extra space inside the element.
+
+Example:
+
+div { padding: 20px; }   /* space inside */
+
+4. Border
+
+The line (or style) that goes around the padding and content.
+
+Can control thickness, style, and color.
+
+Example:
+
+div { border: 2px solid black; }
+
+5. Margin
+
+The space outside the border, i.e., between the element and its neighbors.
+
+Example:
+
+div { margin: 15px; }   /* space outside */

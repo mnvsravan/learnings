@@ -1,0 +1,24 @@
+div{
+    height:100px;
+    width: 110px;
+    background-color:aqua;
+}
+/* the hegiht is like the legth of the box till where it should take space
+the width is the horizontal legth of the box till where it should take place  */
+div{
+    border-width:10px;
+    border-style:double;
+    border-color: black;
+}
+/* }
+this can be written also in one line by "border= wdith,style,color" */
+div{
+    text-align:center;
+}
+/* this text align now works wrt to css block not whole page like if we do for heading it wont shift in the middle of the page */
+h1{
+    height:70px;
+    width:300px;
+    border:5px dashed blue;
+    text-align:center;
+}
