@@ -1,0 +1,57 @@
+block
+
+The element starts on a new line and takes up the full width available.
+
+Examples: <div>, <p>, <h1> by default.
+
+inline
+
+The element does not start on a new line.
+
+It only takes up as much width as its content.
+
+Examples: <span>, <a>, <strong> by default.
+
+inline-block
+
+Like inline, it flows inline with text, but you can set width and height.
+
+none
+
+The element is not displayed at all (removed from layout).
+
+flex
+
+Makes the element a flex container.
+
+Its children become flex items, which can be arranged using flexbox rules.
+
+inline-flex
+
+Similar to flex, but the container itself behaves like an inline element.
+
+grid
+
+Turns the element into a grid container.
+
+Its children are placed into rows and columns using grid rules.
+
+inline-grid
+
+Similar to grid, but the container itself behaves like an inline element.
+
+table
+
+Makes the element behave like an HTML <table>.
+
+inline-table
+
+Same as table, but behaves like an inline element.
+
+list-item
+
+Makes the element behave like a list item (<li>), with a marker (like bullets/numbers).
+
+run-in (rarely used)
+
+Makes the element behave as block or inline depending on context.

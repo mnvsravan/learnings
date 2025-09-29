@@ -1,0 +1,35 @@
+#one{
+   height:100px;
+   width:100px;
+   border: 4px solid black;
+   background-color:pink;
+   display:inline;
+      /* now this behaves like a inline like takes only required  */
+
+}
+#us{
+    height:100px;
+   width:100px;
+   border: 4px solid black;
+   background-color:pink;
+   display:block;
+}
+div {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}
+.myg{
+    
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}
+/* if i wont use inline block the margin of upper and lower would be fed */
+/* if we use display as none then the whole thing dissapers
+if we use hidden then the place will be reserved but the part will be dispaered */
+
