@@ -32,4 +32,4 @@ div {
 /* if i wont use inline block the margin of upper and lower would be fed */
 /* if we use display as none then the whole thing dissapers
 if we use hidden then the place will be reserved but the part will be dispaered */
-
+/* There is another thing called RGBA in which rgb is same and a is alpha , here the alpha decided the intesity of the colour this lies from 0 to 1  */
