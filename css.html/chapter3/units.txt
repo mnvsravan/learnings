@@ -1,0 +1,37 @@
+CSS Units and Their Definitions
+1. Absolute Units
+
+These never change, regardless of screen or parent.
+
+Unit	Meaning	Conversion
+px	Pixel – a dot on the screen	1px = 1/96 inch
+pt	Point – used in print	1pt = 1/72 inch
+pc	Pica – used in print	1pc = 12pt
+in	Inch	1in = 96px
+cm	Centimeter	1cm ≈ 37.8px
+mm	Millimeter	1mm = 1/10 cm
+2. Relative Units
+
+These depend on font-size, parent, or viewport.
+
+Font-relative units
+Unit	Meaning	Example
+em	Relative to the font-size of the parent.	If parent is 16px, then 2em = 32px.
+rem	Relative to the font-size of the root element (html).	If html { font-size: 10px; }, then 2rem = 20px everywhere.
+ex	Relative to the x-height (height of lowercase "x") of the current font.	1ex ≈ half of current font size (depends on font).
+ch	Relative to the width of the "0" character of the font.	50ch = width of 50 zeros.
+Viewport-relative units
+Unit	Meaning	Example
+vw	1% of viewport width.	On 1000px wide screen → 50vw = 500px.
+vh	1% of viewport height.	On 900px tall screen → 50vh = 450px.
+vmin	1% of smaller side (width or height).	If width=1200px, height=800px → 1vmin = 8px.
+vmax	1% of larger side (width or height).	Same screen → 1vmax = 12px.
+3. Percentage (%)
+
+% → Relative to the parent element.
+
+Width → relative to parent’s width.
+
+Font-size → relative to parent’s font-size.
+
+Padding/Margin → relative to parent’s width, not height.
