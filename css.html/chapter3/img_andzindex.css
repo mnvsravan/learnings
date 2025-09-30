@@ -1,0 +1,26 @@
+div{
+    
+    height:100px;
+    width:100px;
+    border:3px solid black;
+    display:inline-block;
+}
+#box2{
+    position:relative;
+    top:10px;
+    left:25px;
+    z-index:1
+}
+#box3{
+    position:relative;
+    top:10px;
+    left:10px;
+    z-index:-1;
+}
+/* like this z-index is used for overlapping to decide which will overlap if -1 its back and +1 its front */
+#body{
+    background-image: url("pic.jpg");
+    background-size: cover;
+
+}
+/* the syntax is correct idk why its not working */
