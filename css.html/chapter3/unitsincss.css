@@ -1,13 +1,25 @@
 #box1 {
   height: 100px;
-  width: 100px;
+  width: 200px;
   background-color: green;
+  font-size:10px;
 }
 
 #box2 {
   height: 50px;
-  width: 50px;
-  /* width: 30%; */
+  
+   width: 30%; 
   background-color: yellow;
+  margin-left: 20%;
+  font-size:3em;
+  width:5em;
+  width:5rem;
+  width:100vw;
+  height:100vh;
 }
-
+/* this % is the amt of space it will take wrt to the parent like above it takes 30% of how much a div takes cuz div here is parent */
+/* em is the value of font size of the parent size but and if we use em in wdith it is the font size of its own not parents
+like if the parent font size is 10px and fontsize or the child is 3em ie 3*10 and then width is 5*3*10 */
+/* rem is like size of the word in the normal text like paragrah so it takes that amount of space */
+/* vw is relative 1% of veiwport width */
+ /* vh is relative 1% of veiwport height  */
