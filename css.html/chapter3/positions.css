@@ -1,0 +1,36 @@
+
+div{
+    
+    height:100px;
+    width:100px;
+    border:3px solid black;
+    display:inline-block;
+}
+#box1{
+    position:static;
+    top:20px;
+}
+/* if we do anything it wont change as the name says */
+#box2{
+    position:relative;
+    top:20px;
+    left:10px;
+}
+/* like now the block moves wrt to its previous position (initially); */
+#box3{
+    position:absolute;
+    top:20px;
+    right:10px;
+}
+/* like here its moves wrt to the parent/ancestor postition there the parent/ancestor is the body ie the browser so it moves 20 from top down and 10 from right */
+#box4{
+    position:fixed;
+    top:0px;
+}
+/* here the refernce is always the browser and its place wont change even after we scroll */
+#box5{
+    position:sticky;
+    top:0px;
+    left:20px;
+}
+/* this is the position which gets fixed after a point of time when we pass through it , like it works like if u want it to stick to top keep top=0 etc */

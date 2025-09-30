@@ -1,0 +1,37 @@
+1. static (default)
+
+This is the default position for all elements.
+
+Elements are placed in the normal document flow, one after another.
+
+top, right, bottom, left, and z-index properties do not work with static.
+
+2. relative
+
+The element remains in the normal flow, but you can shift it relative to its original position using top, right, bottom, left.
+
+Space for the element is still preserved in the layout.
+
+3. absolute
+
+The element is removed from the normal flow.
+
+Positioned relative to the nearest positioned ancestor (an ancestor with position: relative, absolute, or fixed).
+
+If no ancestor is positioned, it’s positioned relative to the <html> (the page itself).
+
+4. fixed
+
+The element is removed from the flow.
+
+Positioned relative to the viewport (the browser window), so it doesn’t move when scrolling.
+
+Often used for sticky headers, menus, or floating buttons.
+
+5. sticky
+
+A mix of relative and fixed.
+
+By default, it acts like relative.
+
+But when you scroll and the element reaches a defined threshold (top, right, bottom, left), it “sticks” to that position (like fixed) until its parent container is scrolled out of view.
