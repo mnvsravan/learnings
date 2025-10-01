@@ -1,0 +1,34 @@
+div{
+    height:150px;
+    width:150px;
+    border:3px solid black;
+    background-color: aquamarine;
+    position:absolute;
+    top:100px;
+    left:100px;
+    transition: all;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1ms;
+    /* transition: propertyname , duration,type,delay;
+} */
+ 
+}
+div:hover{
+    background-color: black;
+    color: antiquewhite;
+    font-size:20px;
+    /* transform: rotate(90deg); */
+ /* we can use spearatly for each axis like :roatae x etc */
+ /* transform: scale(2); */
+ /* you can do for single axis like x and y be keeping scale x/y or even by scale(1,2) etc */
+ /* transform:translateX(100px); */
+ /* similarly use the same for y axis and if u want both then use translate(x,y) */
+ transform:skew(30deg);
+ /* it like elongates  */
+}
+/* this applied when i move my curser across it */
+div:active{
+    background-color: cadetblue;
+}
+/* this applied when i click on it */
