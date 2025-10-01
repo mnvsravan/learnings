@@ -1,0 +1,38 @@
+div {
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    background-color: aqua;
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    animation-name: goat;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 3;
+    animation-direction: alternate;
+    /* animation: name,time,type,delay,iteration,direction */
+
+
+}
+
+@keyframes goat {
+    0% {
+        left: 0px;
+        background-color: black;
+        color: white
+    }
+    69%{
+        left:100px;
+        background-color: chartreuse;
+        color:black
+    }
+
+    100%{
+        left: 200px;
+        background-color: coral;
+        color: grey
+    }
+}
+/* if there is no switch in between 0 and 100% we can just use from-to things instead of percentages */
