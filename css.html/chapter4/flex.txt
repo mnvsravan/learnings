@@ -1,0 +1,170 @@
+Flexbox (Flexible Box Layout) is a CSS layout system used to arrange elements in a container, making it easier to align, distribute, and space them — horizontally or vertically.
+
+It was introduced to solve problems of traditional layouts (like using floats, tables, or inline-blocks) and is especially good for responsive design.
+
+⚡ Characteristics of Flexbox
+
+One-Dimensional Layout
+
+Flexbox works in one direction at a time (row OR column).
+
+If you need both row and column control → use CSS Grid.
+
+Main Axis & Cross Axis
+
+Items are arranged along a main axis (horizontal or vertical).
+
+The other axis is called the cross axis.
+
+Flexible Sizing
+
+Items can grow or shrink automatically to fit the container.
+
+Order Control
+
+You can rearrange items visually with order (without changing HTML).
+
+Alignment & Distribution
+
+Powerful properties like justify-content, align-items, and align-content help in perfect alignment.
+
+Wrapping
+
+Items can wrap onto new lines if the container is too small (flex-wrap).
+
+Responsive Friendly
+
+Makes it easier to build layouts that adapt to different screen sizes.
+
+Independent Item Control
+
+Each flex item can override container alignment using align-self.
+
+
+Parent Properties (applied to flex container)
+
+display: flex;
+
+Defines a flex container. All direct children become flex items.
+
+flex-direction
+
+Defines the direction of items in the flex container.
+
+Values:
+
+row → items left to right (default).
+
+row-reverse → items right to left.
+
+column → items top to bottom.
+
+column-reverse → items bottom to top.
+
+flex-wrap
+
+Controls whether flex items should wrap onto multiple lines.
+
+Values:
+
+nowrap → all items in one line (default).
+
+wrap → items wrap to next line when needed.
+
+wrap-reverse → items wrap to next line in reverse order.
+
+flex-flow
+
+Shorthand for flex-direction + flex-wrap.
+
+Example: flex-flow: row wrap;
+
+justify-content
+
+Defines alignment of items along the main axis.
+
+Values:
+
+flex-start → items packed at start.
+
+flex-end → items packed at end.
+
+center → items in center.
+
+space-between → equal space between items.
+
+space-around → equal space around items.
+
+space-evenly → equal space between & around items.
+
+align-items
+
+Defines alignment along the cross axis.
+
+Values:
+
+stretch → items stretch to fill container (default).
+
+flex-start → align at start of cross axis.
+
+flex-end → align at end of cross axis.
+
+center → align in center.
+
+baseline → align by text baseline.
+
+align-content
+
+Controls space between multiple lines of flex items (only when wrapping).
+
+Values:
+
+stretch → stretch lines to fill space.
+
+flex-start → lines packed at start.
+
+flex-end → lines packed at end.
+
+center → lines in middle.
+
+space-between → equal space between lines.
+
+space-around → equal space around lines.
+
+Child Properties (applied to flex items)
+
+order
+
+Changes the order of items (default = 0).
+
+Example: order: 2; puts the item after items with lower order.
+
+flex-grow
+
+Defines how much an item can grow relative to others.
+
+Example: flex-grow: 2; → item grows twice as much as flex-grow: 1.
+
+flex-shrink
+
+Defines how much an item can shrink relative to others.
+
+Example: flex-shrink: 0; → item will not shrink.
+
+flex-basis
+
+Defines the default size of an item before space is distributed.
+
+Example: flex-basis: 200px;
+
+flex
+
+Shorthand for flex-grow flex-shrink flex-basis.
+
+Example: flex: 1 0 100px;
+
+align-self
+
+Overrides align-items for a single item.
+
+Values: same as align-items (auto, flex-start, flex-end, center, baseline, stretch).

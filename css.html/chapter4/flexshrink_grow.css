@@ -1,0 +1,41 @@
+body {
+    text-align: center;
+}
+
+div {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+#container {
+    width: 800px;
+    height: 200px;
+    display: flex;
+}
+
+#box1 {
+    background-color: aqua;
+    flex-grow:1;
+}
+
+#box2 {
+    background-color: pink;
+    flex-grow:1;
+}
+/* no matter what if we use this it takes all the sapce */
+
+#box3 {
+    background-color: brown;
+}
+
+#box4 {
+    background-color: red;
+    flex-shrink:1;
+    /* this  we can see when the size decreases */
+}
+
+#box5 {
+    background-color: blue;
+}
