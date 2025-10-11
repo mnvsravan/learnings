@@ -72,3 +72,42 @@ while (userNum != gameNum) {
 }
 
 console.log("Congratulations, you entered the right number");
+// strings
+let string="SRAVANONTOP";
+console.log(string.length);
+console.log(string[4]);
+// template strings
+let obj = {
+    item: "pen",
+    price: 10,
+};
+
+let output = `the cost of ${obj.item} is ${obj.price} rupees`; // better way of rep , the $ is used for items
+console.log(output);
+
+console.log("the cost of", obj.item, "is", obj.price, "rupees");
+let trial=`value of ${1+2+3}`;
+console.log(trial);
+let string1="Sravan";
+string1=string1.toUpperCase(); /// we can use the same for the lower case , we can also use \n just like in C
+console.log(string1);
+let string2="  Im the Best    ";
+console.log(string2.trim()); // this like cuts the starting and ending gaps by not disturbing the between ones
+let string3="01234567";
+console.log(string3.slice(1,3)) // this like prints 12 like the 3rd one and after gets vanuished
+console.log(string.slice(1)) // here only the 1 gets sliced 0234567 prints
+let string4="you are the best";
+let string5="sravan";
+let res= string4.concat(string5);
+console.log(res);
+console.log("Ok bro"+ string4 + string5); // we can use + instead of string.concat(string)
+let string6="hello";
+console.log(string6.replace("lo","p"));
+console.log(string6.replaceAll("l","c"));
+console.log(string6.charAt(3));
+// question
+
+let fullName = prompt("enter your fullname without spaces");
+
+let username = "@" + fullName + fullName.length;
+console.log(username);
