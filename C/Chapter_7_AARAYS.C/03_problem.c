@@ -2,6 +2,7 @@
 
 // Function to print elements of an array
 void printArray(int a[], int n) {
+    
     // Loop through each element of the array
     for (int i = 0; i < n; i++) {
         printf("%d ", a[i]);  // Print the current element followed by a space
@@ -11,6 +12,7 @@ void printArray(int a[], int n) {
 
 // Function to reverse the elements of the array in place
 void reverse(int arr[], int n) {
+    
     /*
      * Swap elements from start to end moving towards the middle:
      * For i from 0 to n/2, swap arr[i] and arr[n - i - 1]
@@ -29,11 +31,11 @@ int main() {
     int arr[] = {1, 2, 3, 4, 5, 6};  // Declare and initialize the array
     int n = 6;                       // Store the size of the array
 
-    printArray(arr, n);  // Print original array
+    printArray(arr,n);  // Print original array
 
-    reverse(arr, n);     // Reverse the array in place
+    reverse(arr,n);     // Reverse the array in place
 
-    printArray(arr, n);  // Print the reversed array
+    printArray(arr,n);  // Print the reversed array
 
     return 0;            // Return 0 to indicate successful execution
 }
