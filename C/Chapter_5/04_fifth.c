@@ -10,7 +10,7 @@ int main() {
     float a, b, c;
     a = 5; b = 10; c = 15;
 
-    printf("The average of a, b and c is %f\n", average(a, b, c));
+    printf("The average of a, b and c is %f\n", average(  a,b,c));
 
     return 0;
 }
