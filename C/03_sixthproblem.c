@@ -17,11 +17,11 @@ float* average(int a, int b){
 int main(){
     int x = 4;
     int y = 6;
-    int* ptr1;
-    float* ptr2;
+    int* ptr3;
+    float* ptr4;
 
-    ptr1 = sum(x,y); // we can also write just sum(x,y) and keep sum(int a, int b) as sum(int* a, int* b) and it will work the same way
-    ptr2 = average(x,y);
+    ptr3 = sum(x,y); // we can also write just sum(x,y) and keep sum(int a, int b) as sum(int* a, int* b) and it will work the same way
+    ptr4 = average(x,y);
 
-    printf("The address of sum is %u and of average is %u", ptr1, ptr2 );
+    printf("The address of sum is %u and of average is %u", ptr3, ptr4 );
 }
