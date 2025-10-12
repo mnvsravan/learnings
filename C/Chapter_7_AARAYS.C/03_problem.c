@@ -1,7 +1,7 @@
 #include <stdio.h>  // Include standard input-output header for printf
 
 // Function to print elements of an array
-void printArray(int a[], int n) {
+void printArray(int a[],int n) {
     
     // Loop through each element of the array
     for (int i = 0; i < n; i++) {
@@ -11,7 +11,7 @@ void printArray(int a[], int n) {
 }
 
 // Function to reverse the elements of the array in place
-void reverse(int arr[], int n) {
+void reverse(int arr[],int n) {
     
     /*
      * Swap elements from start to end moving towards the middle:
@@ -22,7 +22,7 @@ void reverse(int arr[], int n) {
     // Loop from the start to the middle of the array
     for (int i = 0; i < n / 2; i++) {
         temp = arr[i];               // Store the current element in temp
-        arr[i] = arr[n - i - 1];    // Replace current element with its opposite from end
+        arr[i] = arr[n- i - 1];    // Replace current element with its opposite from end
         arr[n - i - 1] = temp;      // Replace the opposite element with the temp value (original current)
     }
 }
