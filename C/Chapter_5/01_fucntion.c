@@ -5,7 +5,8 @@ int sum(int, int);
 
 // Function definition
 int sum(int a, int b) {
-    return a + b;
+    int c= a+b; // or instead of this int c and all just keep return a+b
+    return c;
 }
 
 int main() {
