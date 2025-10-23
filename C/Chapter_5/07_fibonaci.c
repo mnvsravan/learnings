@@ -10,7 +10,7 @@ int fibonacci(int n) {
 }
 
 int main() {
-    int number = 7;
+    int number = 8;
     printf("The %dth Fibonacci number is %d\n", number, fibonacci(number));
     return 0;
 }

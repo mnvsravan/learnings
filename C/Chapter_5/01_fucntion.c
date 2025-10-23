@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-// Function declaration
-int sum(int, int);
+int sum(int,int);
 
 // Function definition
 int sum(int a, int b) {
     int c= a+b; // or instead of this int c and all just keep return a+b
     return c;
+    
 }
 
 int main() {
