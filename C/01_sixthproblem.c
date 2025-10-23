@@ -8,9 +8,9 @@ int returning_5(int *ptr) {
 
 int main() {
     int a = 2;
-    int *ptr = &a;
+    int *sex = &a;
     printf("The adress of a is %u\n", &a);
-    returning_5(ptr);
+    returning_5(sex);
     return 0;
 }
 
