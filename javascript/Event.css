@@ -1,0 +1,15 @@
+div{
+    background-color: aqua;
+    border: 5px;
+    margin: 5px;
+    height: 100px;
+    width:100px;
+}
+.dark{
+    background-color: black;
+    color: antiquewhite;
+}
+.light{
+    background-color: antiquewhite;
+    color: black;
+}

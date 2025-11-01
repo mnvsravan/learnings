@@ -1,0 +1,33 @@
+The Document Object Model (DOM) is a programming interface that represents an HTML or XML document as a tree of objects.
+
+Each element, attribute, and piece of text in the HTML becomes a node in this tree.
+
+The DOM allows JavaScript to access, modify, add, or delete elements dynamically.
+
+It enables web pages to be interactive and responsive to user actions.
+
+Using the DOM, developers can change an element’s content, style, and attributes in real time.
+
+An event in JavaScript is any action or occurrence that happens in the browser (like a click or keypress).
+
+Events help the web page respond to user interactions dynamically.
+
+Common events include click, mouseover, mouseout, keydown, submit, and load.
+
+Event handling means writing JavaScript code that runs when a specific event occurs.
+
+Events can be handled in three ways — inline, by using an event property, or by using addEventListener().
+
+The addEventListener() method is preferred because it allows multiple events and keeps code organized.
+
+Together, DOM and events make web pages dynamic, allowing JavaScript to react to user actions and modify page elements instantly
+
+
+
+The event object is a special object that JavaScript automatically creates whenever an event occurs (like a click, keypress, mouse move, etc.).
+It contains all the information about that specific event — such as which element triggered it, the mouse position, which key was pressed, and more.
+
+
+An event listener is a function that waits (or listens) for a specific event to happen on an element, such as a click, keypress, mouseover, etc., and then runs a piece of code when that event occurs.
+
+It lets you make your web page interactive — like reacting to button clicks, mouse movements, or keyboard input.
