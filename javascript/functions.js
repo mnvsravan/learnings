@@ -136,6 +136,3 @@ let factorial = diddy.reduce((res, curr) => {
 });
 
 console.log("factorial = ", factorial);
-
-
-
