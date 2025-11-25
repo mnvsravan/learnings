@@ -19,7 +19,7 @@ int main() {
     
     // slice from index 1 to 5 (indexes start at 0)
     // "Harry bhai" -> substring is "arry"
-    printf("%s", slice(str, 1, 5));   
+    printf("%s", slice(str, 0, 5));   
     
     return 0;   // successful execution
 }
