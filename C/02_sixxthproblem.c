@@ -1,6 +1,6 @@
 #include <stdio.h>
 int multiply_thirdty(int*);
-#include <stdio.h>
+
 
 int multiply_thirty(int* p) {
     return (*p * 30); // dereferencing pointer to get value and multiply by 30
