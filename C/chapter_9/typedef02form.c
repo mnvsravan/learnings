@@ -3,7 +3,7 @@
 
 // typedef = keyword in C used to give a nickname (alias) to an existing type
 // Here we define a structure 'employee' and give it the alias 'Emp'
-typedef struct employee
+typedef struct
 {
     int code;        // employee code (integer ID)
     float salary;    // employee salary
