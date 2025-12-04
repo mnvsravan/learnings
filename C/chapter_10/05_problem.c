@@ -9,6 +9,7 @@ int main() {
     // "r" = read mode → file must already exist, otherwise fopen will return NULL
 
     fscanf(ptr, "%d", &num);  
+    printf("The number read from file is: %d\n", num);
     // Read an integer from the file and store it in variable 'num'
     // Example: if int.txt contains 5 → num = 5
 
@@ -19,7 +20,8 @@ int main() {
     ptr = fopen("int.txt", "w");  
     // "w" = write mode → creates new empty file OR erases existing contents
 
-    fprintf(ptr, "%d", 2 * num);  
+    fprintf(ptr, "%d", 2 * num); 
+    printf("Wrote %d to the file.\n", 2 * num); 
     // Write double the value of 'num' into the file
     // Example: if num was 5 → writes 10 into int.txt
 
