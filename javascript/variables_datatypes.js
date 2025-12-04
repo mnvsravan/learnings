@@ -84,3 +84,4 @@ student["age"] = student["age"]+1;
 console.log(student);
 console.log(student["age"]); // like this we can ask any thing in it , we can use student.age instead of that
 console.log(student.fullName);
+
