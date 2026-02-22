@@ -22,3 +22,75 @@ e1=Employee(" MNV Sravan", "Tech Company" , 5000000 , "Python")
 print(e1.getInfo)  # The name of the employee is Sravan and the company name is Tech Company and the salary is 5000000 and the language is Python (accessing the getInfo property)
 e1.getInfo = "John , Google , 4000000 , Java"  # setting the getInfo property using the setter method
 print(e1.getInfo)  # The name of the employee is John and the company name is Google and the salary is 4000000 and the language is Java (accessing the getInfo property after setting it using the setter method)
+
+
+
+
+
+
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name   # calls setter
+        self.age = age     # calls setter
+
+    # ---- NAME PROPERTY ----
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        parts = value.split()
+
+        if len(parts) < 2:
+            raise ValueError("Please provide both first and last name")
+
+        first_name = parts[0]
+        last_name = parts[1]
+
+        self._name = first_name + " " + last_name
+
+    # ---- AGE PROPERTY ----
+    @property
+    def age(self):
+        return self._age
+
+    @age.setter
+    def age(self, age):
+        if age < 0:
+            raise ValueError("Age cannot be negative")
+        self._age = age
+
+
+# ---- Example ----
+p = Person("John Doe", 7)
+print(p.name)   # John Doe
+print(p.age)    # 7
+
+
+
+
+class Aura:
+    a = 1
+
+    def show(self):
+        print(f"The class attribute of a is {self.a}")
+
+    @property
+    def name(self):
+        return f" first name is {self.fname} and last name is {self.lname}"
+
+    @name.setter
+    def name(self, value):
+        self.fname = value.split(" ")[0]
+        self.lname = value.split(" ")[1]
+
+
+e = Aura()
+e.a = 45
+
+e.name = "Harry Khan"
+print(e.name)
+
+e.show()
