@@ -116,3 +116,12 @@ print(type(x)) # this will print <class 'int'>
 # you can also do like 
 d=input("Enter a value: ")
 print(type(d)) # this will print <class 'int'>, because num1 is an integer variable.
+
+
+
+
+
+# we can define global variable using global keyword, global variables are accessible throughout the entire program, including inside functions. For example:
+def my_function():
+    global a
+    print(a) # this will print 10, because a is a global variable and can be accessed inside the function.
