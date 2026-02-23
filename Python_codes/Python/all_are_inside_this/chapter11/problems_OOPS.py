@@ -176,6 +176,6 @@ print(v1 * v3)  # Output: 50
 print(v1.length())  # Output: 3.7416573867739413
 print(len(v1))  # Output: 3 (length of the vector as an integer)
 
-# now for the same problem i want to calc length of the vector
+# now for the same problem i want to calc length of the vecto
    
 
