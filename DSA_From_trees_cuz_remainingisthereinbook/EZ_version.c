@@ -147,36 +147,23 @@ void delete(int x)
     }
 
     // ✅ Case 3: Two children
-    else
-    {
-        struct node* lefttree = temp->left;
-        struct node* righttree = temp->right;
+    else{
+        struct node* pred = temp->left;
+        struct node* predParent = temp;
 
-        struct node* s1 = lefttree;
-
-        // find rightmost of left subtree
-        while (s1->right != NULL)
-        {
-            s1 = s1->right;
+        while(pred->right != NULL){
+            predParent = pred;
+            pred = pred->right;
         }
 
-        // attach right subtree
-        s1->right = righttree;
+        temp->data = pred->data;
 
-        if (parent == NULL)
-        {
-            root = lefttree;
-        }
-        else if (parent->left == temp)
-        {
-            parent->left = lefttree;
-        }
+        if(predParent->right == pred)
+            predParent->right = pred->left;
         else
-        {
-            parent->right = lefttree;
-        }
+            predParent->left = pred->left;
 
-        free(temp);
+        free(pred);
     }
 }
 
