@@ -120,6 +120,58 @@ void delete(int index){
 
     len--;
 }
+struct node* deleteRepeating(struct node* head){
+    struct node* temp1 = head;
+
+    while(temp1 != NULL){
+        struct node* temp2 = temp1->next;
+        int flag = 0;
+
+        // check if duplicate exists
+        while(temp2 != NULL){
+            if(temp1->data == temp2->data){
+                flag = 1;
+                break;
+            }
+            temp2 = temp2->next;
+        }
+
+        if(flag == 1){
+            int val = temp1->data;
+
+            // delete all occurrences of val
+            struct node* curr = head;
+            struct node* prev = NULL;
+
+            while(curr != NULL){
+                if(curr->data == val){
+                    if(prev == NULL){
+                        head = curr->next;
+                        free(curr);
+                        curr = head;
+                    }
+                    else{
+                        prev->next = curr->next;
+                        free(curr);
+                        curr = prev->next;
+                    }
+                }
+                else{
+                    prev = curr;
+                    curr = curr->next;
+                }
+            }
+
+            // restart from head
+            temp1 = head;
+        }
+        else{
+            temp1 = temp1->next;
+        }
+    }
+
+    return head;
+}
 
 
 
