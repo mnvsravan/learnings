@@ -53,3 +53,6 @@ print(set_e.isdisjoint(set_f)) # this will check if set_e and set_f are disjoint
 # frozen sets are immutable sets, which means that once a frozenset is created, its elements cannot be changed. This makes frozensets useful for situations where you want to create a set that should not be modified after it has been created. Frozensets are defined using the frozenset() constructor. For example, you can create a frozenset of numbers like this: my_frozenset = frozenset([1, 2, 3]). Frozensets can contain any immutable data type, such as integers, floats, strings, and tuples. However, frozensets cannot contain mutable data types like lists or dictionaries.
 my_frozenset = frozenset([1, 2, 3]) # this will create a frozenset called my_frozenset that contains the values 1, 2, and 3. Note that the input to the frozenset() constructor is a list, which is converted into a frozenset.
 print(my_frozenset) # this will print the frozenset my_frozenset to the console. The output will be frozenset({1, 2, 3}), which indicates that the frozenset contains the values 1, 2, and 3. Note that the order of the elements in a frozenset is not guaranteed and may vary each time you run the code.
+
+# A frozenset is just like a normal set, but:
+# 👉 It is immutable (cannot be changed)                               we use Ctrl / for making entire code into comments
