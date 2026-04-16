@@ -57,6 +57,22 @@ if (u in comment5 or
 else:
     print("This comment is not spam.")
 
+# Another effective way 
+
+#     spam_comments = [
+#     "make a lot of money",
+#     "buy a lot of things",
+#     "subscribe to my channel",
+#     "click here for prize"
+# ]
+
+# u = input("Enter your comment: ").lower()
+
+# if any(spam in u for spam in spam_comments):
+#     print("This comment is spam.")
+# else:
+#     print("This comment is not spam.")
+
 
 
 
