@@ -27,8 +27,8 @@ f.close
 f=open("create_a_new_file.txt","r")
 line=f.readline()
 while(line != ""):
- print(line,type(lines))
- line=f.readline()
+ print(line,type(line))
+ line=f.readline()        # updates line for next iteration
 
 
 f.close
