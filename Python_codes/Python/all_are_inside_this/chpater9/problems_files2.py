@@ -44,3 +44,29 @@ print("Blanks:", count_blank)
 print("Vowels:", count_vowels)
 print("Lowercase:", count_lower)
 print("Uppercase:", count_upper)
+
+
+
+#
+
+
+fname = input("Enter file name: ")
+
+with open(fname, "r") as f:
+    count = 0
+    total = 0.0
+
+    for line in f:
+        if line.startswith("X-DSPAM-Confidence:"):
+            label, value = line.split(":")   # unpacking
+            num = float(value)
+
+            total += num
+            count += 1
+
+    if count > 0:
+        average = total / count
+        print("Count:", count)
+        print("Average:", average)
+    else:
+        print("No matching lines found")
