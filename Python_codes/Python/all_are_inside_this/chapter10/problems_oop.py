@@ -128,3 +128,30 @@ train1.getfare("Hyderabad", "Bangalore")
 
 
 # its not nessasry to only use self as the first parameter in the method of a class. We can use any name we want, but it is a convention to use self to refer to the instance of the class. The self parameter is used to access the attributes and methods of the instance within the class. It allows us to differentiate between instance variables and local variables within the method. Using self is a common practice in Python and it helps to improve code readability and maintainability.
+
+#5
+
+class Account:
+    def __init__(self, bal, acc):
+        self.balance = bal
+        self.account_no = acc
+
+    def debit(self, amount):
+        self.balance -= amount
+        print("Rs.", amount, "was debited")
+        print("total balance = ", self.get_balance())
+
+    def credit(self, amount):
+        self.balance += amount
+        print("Rs.", amount, "was credited")
+        print("total balance = ", self.get_balance())
+
+    def get_balance(self):
+        return self.balance
+
+
+acc1 = Account(10000, 12345)
+
+acc1.debit(1000)
+acc1.credit(500)
+acc1.credit(40000)
