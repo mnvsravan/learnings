@@ -23,8 +23,8 @@ print(e1.getInfo)  # The name of the employee is Sravan and the company name is 
 e1.getInfo = "John , Google , 4000000 , Java"  # setting the getInfo property using the setter method
 print(e1.getInfo)  # The name of the employee is John and the company name is Google and the salary is 4000000 and the language is Java (accessing the getInfo property after setting it using the setter method)
 
-
-
+# *** PROPERTY CANOT TAKE ARGUMENTS !!!!!!!!!!!!!!!!!!!!!!
+# **** we should not use setter arguments with self.setter arguments in setter
 
 
 
