@@ -9,10 +9,14 @@ runs_ser = pd.Series(runs)
 print(runs_ser)
 print()
 # custom index
-marks_of=['Maths,English','Hindi']
+marks_of=['Maths','English','Hindi']
 mark=[100,90,70]
-result=pd.Series(marks_of,index=mark)
+result = pd.Series(mark, index=marks_of)
 print(result)
+#Name
+result = pd.Series(mark, index=marks_of,name="Sravan")
+
+
 # WE CAN DO THE SAME STUFF with dicts
 print()
 marks={
