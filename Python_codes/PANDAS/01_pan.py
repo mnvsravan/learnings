@@ -9,15 +9,10 @@ runs_ser = pd.Series(runs)
 print(runs_ser)
 print()
 # custom index
-marks = [67,57,89,100]
-subjects = ['maths','english','science','hindi']
-print(pd.Series(marks,index=subjects))
-print()
-# setting a name
-marks = pd.Series(marks,index=subjects,name='Nitish ke marks')
-print(marks)
-
-
+marks_of=['Maths,English','Hindi']
+mark=[100,90,70]
+result=pd.Series(marks_of,index=mark)
+print(result)
 # WE CAN DO THE SAME STUFF with dicts
 print()
 marks={
