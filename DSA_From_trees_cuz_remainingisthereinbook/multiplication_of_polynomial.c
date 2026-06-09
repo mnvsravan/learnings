@@ -2,134 +2,216 @@
 #include <stdlib.h>
 
 struct node{
+    int degree;
     int coeff;
-    int exp;
     struct node* next;
 };
 
-// Insert at end
-struct node* insert(struct node* head, int c, int e){
+struct node* p1 = NULL;
+struct node* tail1 = NULL;
+struct node* ADD=NULL;
+struct node* ADDT=NULL;
+struct node* MUL=NULL;
+struct node* MULT=NULL;
+struct node* p2 = NULL;
+struct node* tail2 = NULL;
 
+struct node* create(int x,int y){
     struct node* newnode = (struct node*)malloc(sizeof(struct node));
-    newnode->coeff = c;
-    newnode->exp = e;
+
+    newnode->coeff = x;
+    newnode->degree = y;
     newnode->next = NULL;
 
-    if(head == NULL){
-        head = newnode;
-    }
-    else{
-        struct node* temp = head;
-        while(temp->next != NULL){
-            temp = temp->next;
-        }
-        temp->next = newnode;
-    }
-
-    return head;
+    return newnode;
 }
 
-// Display polynomial
-void display(struct node* head){
+void insert1(int x,int y){
 
-    while(head != NULL){
+    struct node* newnode = create(x,y);
 
-        printf("%dx^%d", head->coeff, head->exp);
+    if(p1 == NULL){
+        p1 = newnode;
+        tail1 = newnode;
+    }
+    else{
+        tail1->next = newnode;
+        tail1 = newnode;
+    }
+}
 
-        if(head->next != NULL){
+void insert2(int x,int y){
+
+    struct node* newnode = create(x,y);
+
+    if(p2 == NULL){
+        p2 = newnode;
+        tail2 = newnode;
+    }
+    else{
+        tail2->next = newnode;
+        tail2 = newnode;
+    }
+}
+
+void add(struct node*p1,struct node*p2){
+
+    struct node* temp1 = p1;
+    struct node* temp2;
+
+    while(temp1 != NULL){
+
+        temp2 = p2;
+
+        while(temp2 != NULL){
+
+            if(temp1->degree == temp2->degree){
+
+                struct node* newnode =
+                    create(temp1->coeff + temp2->coeff,
+                           temp1->degree);
+
+                if(ADD == NULL){
+                    ADD = ADDT = newnode;
+                }
+                else{
+                    ADDT->next = newnode;
+                    ADDT = newnode;
+                }
+            }
+
+            temp2 = temp2->next;
+        }
+
+        temp1 = temp1->next;
+    }
+}
+
+void multiply(struct node* p1, struct node* p2){
+
+    struct node* temp1 = p1;
+    struct node* temp2;
+
+    while(temp1 != NULL){
+
+        temp2 = p2;
+
+        while(temp2 != NULL){
+
+            struct node* newnode =
+                create(temp1->coeff * temp2->coeff,
+                       temp1->degree + temp2->degree);
+
+            if(MUL == NULL){
+                MUL = MULT = newnode;
+            }
+            else{
+                MULT->next = newnode;
+                MULT = newnode;
+            }
+
+            temp2 = temp2->next;
+        }
+
+        temp1 = temp1->next;
+    }
+}
+void displayAdd(){
+
+    struct node* temp = ADD;
+
+    while(temp != NULL){
+
+        printf("%dx^%d", temp->coeff, temp->degree);
+
+        if(temp->next != NULL){
             printf(" + ");
         }
 
-        head = head->next;
+        temp = temp->next;
     }
 
     printf("\n");
 }
-// ADDITION
-struct node* add(struct node* p1, struct node* p2){
 
-    struct node* result = NULL;
-    struct node* temp = NULL;
-    struct node* newnode;
+void displayMul(){
 
-    while(p1 != NULL && p2 != NULL){
+    struct node* temp = MUL;
 
-        newnode = (struct node*)malloc(sizeof(struct node));
-        newnode->coeff = p1->coeff + p2->coeff;
-        newnode->exp = p1->exp;
-        newnode->next = NULL;
+    while(temp != NULL){
 
-        if(result == NULL){
-            result = newnode;
-            temp = newnode;
-        }
-        else{
-            temp->next = newnode;
-            temp = newnode;
+        printf("%dx^%d", temp->coeff, temp->degree);
+
+        if(temp->next != NULL){
+            printf(" + ");
         }
 
-        p1 = p1->next;
-        p2 = p2->next;
+        temp = temp->next;
     }
 
-    return result;
+    printf("\n");
 }
-// MULTIPLICATION
-struct node* multiply(struct node* p1, struct node* p2){
 
-    struct node* result = NULL;
-    struct node* temp = NULL;
-    struct node* newnode;
+void display1(){
 
-    struct node* t1 = p1;
-    struct node* t2;
+    struct node* temp = p1;
 
-    while(t1 != NULL){
+    while(temp != NULL){
+        printf("%dx^%d", temp->coeff, temp->degree);
 
-        t2 = p2;
-
-        while(t2 != NULL){
-
-            newnode = (struct node*)malloc(sizeof(struct node));
-            newnode->coeff = t1->coeff * t2->coeff;
-            newnode->exp = t1->exp + t2->exp;
-            newnode->next = NULL;
-
-            if(result == NULL){
-                result = newnode;
-                temp = newnode;
-            }
-            else{
-                temp->next = newnode;
-                temp = newnode;
-            }
-
-            t2 = t2->next;
+        if(temp->next != NULL){
+            printf(" + ");
         }
 
-        t1 = t1->next;
+        temp = temp->next;
     }
 
-    return result;
+    printf("\n");
+}
+
+void display2(){
+
+    struct node* temp = p2;
+
+    while(temp != NULL){
+        printf("%dx^%d", temp->coeff, temp->degree);
+
+        if(temp->next != NULL){
+            printf(" + ");
+        }
+
+        temp = temp->next;
+    }
+
+    printf("\n");
 }
 
 int main(){
-    printf("The polynomial 1 is :");
-    struct node* poly1=NULL;
-    poly1 = insert(poly1, 3, 2);
-    poly1 = insert(poly1, 2, 1);
-    display(poly1);
-    printf("The polynomial 2 is :");
-    struct node* poly2=NULL;
-    poly2 = insert(poly2, 4, 2);
-    poly2 = insert(poly2, 5, 1);
-    display(poly2);
-    printf("The sum is :");
-    struct node* sum;
-    sum=add(poly1,poly2);
-    display(sum);
-     struct node* mul=NULL;
-     printf("The Multiplication is :");
-     mul=multiply(poly1,poly2);
-     display(mul);
+
+    // P1 = 5x² + 3x + 2
+    insert1(5,2);
+    insert1(3,1);
+    insert1(2,0);
+
+    // P2 = 4x³ + 6x² + 1
+    insert2(4,3);
+    insert2(6,2);
+    insert2(1,0);
+
+    printf("Polynomial 1: ");
+    display1();
+
+    printf("Polynomial 2: ");
+    display2();
+    
+    add(p1,p2);
+multiply(p1,p2);
+
+printf("Addition: ");
+displayAdd();
+
+printf("Multiplication: ");
+displayMul();
+
+    return 0;
 }
