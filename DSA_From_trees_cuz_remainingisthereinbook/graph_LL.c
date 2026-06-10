@@ -32,7 +32,7 @@ void addEdge(int u, int v){
     }
     else{
         struct node*temp=adj[u];
-        while(temp!=NULL){
+        while(temp->next!=NULL){
             temp=temp->next;
         }
         temp->next=create(v);
