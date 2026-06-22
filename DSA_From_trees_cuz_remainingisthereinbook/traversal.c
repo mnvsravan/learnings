@@ -89,6 +89,7 @@ void preorder(){
     }
 }
 void postorder(){
+    
 
     if(root == NULL)
         return;

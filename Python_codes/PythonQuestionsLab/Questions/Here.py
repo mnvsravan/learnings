@@ -1,3 +1,17 @@
+#
+ch = input("Enter input: ")
+
+if ('0' <= i <= '9' for i in ch):
+    print("Digit")
+
+elif ('a' <= i <= 'z' for i in ch):
+    print("Lowercase Character")
+elif ('A' <= i <= 'Z' for i in ch):
+    print("Uppercase Character")
+else:
+    print("Special Character")
+
+#
 n1=int(input("Enter The  Starting Number :"))
 n2=int(input("Enter The  Ending Number :"))
 for i in range (n1,n2+1):
@@ -217,6 +231,100 @@ if validate_email(email):
 else:
     print("Invalid email id")
 
-    
+def is_sorted(L, n):
+    for i in [n//2, n//4, n//8, 1]:
+        if i == 0:
+            continue
 
+        for j in range(i, n):
+            for k in range(j-i, -1, -i):
+                if L[k+i] < L[k]:
+                    return False
+
+    return True
+
+
+lst = []
+n = int(input("Enter size of list: "))
+
+for i in range(n):
+    x = int(input(f"Enter element {i+1}: "))
+    lst.append(x)
+
+print(is_sorted(lst, n))
+
+
+def remove_duplicates(lst):
+    return list(set(lst))
+
+
+lst = [1, 2, 3, 2, 4, 1, 5]
+
+print(remove_duplicates(lst))
+
+words = []
+
+with open("words.txt", "r") as f:
+    for line in f:
+        words.append(line.strip())
+
+words.append("I")
+words.append("a")
+words.append("")
+
+print(words)
+
+
+word=input("Enter: ")
+word_list=word.split(" ")
+result=""
+for word in word_list:
+    if(word[0]>='a' and word[0]<='z'):
+        result=result+word[0].upper()
+    else:
+        result=result+word[0]
+    for i in range(1,len(word)):
+        result=result+word[i].lower()
+    result=result+" "
     
+print(result)
+
+
+n=int(input("Enter Sqaure Matrix of: "))
+Matrix1=[]
+for i in range(n):
+    rows=[]
+    for j in range(n):
+        x=int(input(f"Enter the value for [{i},{j}]"))
+        rows.append(x)
+    Matrix1.append(rows)
+    
+for i in Matrix1:
+    print(i)
+    
+Matrix2=[]
+for i in range(n):
+    rows=[]
+    for j in range(n):
+        x=int(input(f"Enter the value for [{i},{j}]"))
+        rows.append(x)
+    Matrix2.append(rows)
+    
+for i in Matrix2:
+    print(i)
+    
+result=[]
+for i in range(n):
+    rows=[]
+    for j in range(n):
+        x=0
+        rows.append(x)
+    result.append(rows)
+
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            result[i][j]+=Matrix1[i][k]*Matrix2[k][j]
+            
+for i in result:
+    print(i)
