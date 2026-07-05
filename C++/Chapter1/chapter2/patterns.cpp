@@ -128,6 +128,23 @@ int main()
         cout << "\n";
     }
 
+    // or 
+//     for(int i=1;i<=n;i++){
+//        for(int k=n-i;k>=1;k--){
+//            cout<<"  ";
+//        }
+//        int sum=1;
+//        for( j=1;j<=i;j++){
+//            cout<<sum<<" ";
+//            sum=sum+1;
+//        }
+       
+//         for(int c = sum - 2; c >= 1; c--) {
+//             cout << c << " ";
+//         }
+//         cout<<"\n";
+//    }
+
     //9
       int n;
     cin >> n;
