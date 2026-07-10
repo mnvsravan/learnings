@@ -65,3 +65,57 @@ int main(){
 //  s1->12,34,s2->67,90 max pages=157
 //  s1->12,34,67,s2->90 max pages=113
 //  the answer is 113 which is the minimum possible value of the maximum number of pages assigned to a student.
+
+// SAME QUESTION DIFFERENT CONTEXT
+
+// Given are N boards of length of each given in the form of array, and M painters, such that each painter takes 1 unit of time to paint 1 unit of the board.
+
+// The task is to find the minimum time to paint all boards under the constraints that any painter will only paint continuous sections of boards.
+
+bool isValid(vector<int>& arr, int n, int m, int mid){
+    int painterCount=1;
+    int boardSum=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]>mid){
+            return false;
+        }
+        if(boardSum+arr[i]>mid){
+            painterCount++;
+            boardSum=arr[i];
+        }
+        else{
+            boardSum+=arr[i];
+        }
+        if(painterCount>m){
+            return false;
+        }
+    }
+    return true;
+}
+void minTimeToPaintBoards(vector<int>& arr, int n, int m){
+    int start=0;
+    int end=0;
+    for(int i=0;i<n;i++){
+        end+=arr[i];
+    }
+    int ans=INT32_MAX;
+    while(start<=end){
+        int mid=(start+end)/2;
+        if(isValid(arr,n,m,mid)){
+            ans=mid;
+            end=mid-1;
+        }
+        else{
+            start=mid+1;
+        }
+    }
+    cout<<"Minimum time to paint all boards: "<<ans<<endl;
+}
+int main(){
+    vector<int> arr={10,20,30,40};
+    int n=arr.size();
+    int m=2;
+    minTimeToPaintBoards(arr,n,m);
+    return 0;
+}
+
