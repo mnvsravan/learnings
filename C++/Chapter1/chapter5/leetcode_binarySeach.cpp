@@ -118,4 +118,9 @@ int main(){
     minTimeToPaintBoards(arr,n,m);
     return 0;
 }
-
+// its like 
+// lets say m=2 ie 2 painters
+// now cases are p1->10,p2->20,30,40 max time=90
+// p1->10,20,p2->30,40 max time=70
+// p1->10,20,30,p2->40 max time=60
+// the answer is 60 which is the minimum time to paint all boards.
