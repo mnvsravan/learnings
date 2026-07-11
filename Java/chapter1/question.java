@@ -10,6 +10,16 @@ public class question {
         age=input.nextInt();
         System.out.println("Hello " + name + "! , You are " + age + " years old"+" and welcome to Java!!!");
 
+
+        int num1, num2, sum;
+        System.out.print("Enter first number: ");
+        num1 = input.nextInt();
+        System.out.print("Enter second number: ");
+        num2 = input.nextInt();
+        sum = num1 + num2;
+        System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum);
+
     }
 }
+
 
