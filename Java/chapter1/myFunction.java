@@ -4,7 +4,7 @@ public class myFunction {
         int number = 5;
         System.out.println("The number is: " + number);
         float decimal = 5.5f; // we use f to indicate that it is a float
-        System.out.println("The decimal number is: " + decimal);
+        System.out.println("The decimal number is: " + decimal); // EVEN IF ONE OPERATOR IS STRING WE CAN USE CONCATENATION
         double precision = 5.555555555555555; // we use double for higher precision
         System.out.println("The double precision number is: " + precision);
         boolean isTrue = true; // boolean can be true or false
