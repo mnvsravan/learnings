@@ -21,7 +21,13 @@ public class basics01 {
         System.out.println("Addition: " + (a + b)); // same with /,*,% etc
 
         // Just like C we can use +=,-=,*=,/=,%= operators in Java as well and ++i i++ and all;
-        
+
+
+
+        // typecasting
+        double d = 9.78;
+        int k = (int) d; // Manual casting: double to int
+        System.out.println("Integer value: " + k); // same like c;
     }
 }
     
