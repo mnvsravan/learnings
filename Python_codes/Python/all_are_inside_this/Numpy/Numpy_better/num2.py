@@ -18,6 +18,8 @@ a=np.random.randint(0,100,24).reshape(3,8)
 print(a)
 print(a[[2,0,1]]) # Like this gives 3rd row then 1st row then 2nd row
 print(a[:,[2,0,1]]) # Like this gives 3rd column then 1st column then 2nd column
+print(a[[1,2,0],[1,4,2]]) 
+# this is like pick these specific elements a[1,1]  a[2,4]  a[0,2]
 
 #Boolean Indexing  like it resturns the elements in the array that satisfy the condition we get 1d array
 print(a[a%2==0]) # this gives all the even numbers in the array
