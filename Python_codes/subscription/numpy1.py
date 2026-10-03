@@ -1,3 +1,4 @@
+from matplotlib import dates
 import numpy as np
 ### `Q-1` Create a null vector of size 10 but the fifth value which is 1.
 a = np.zeros(10)
@@ -89,3 +90,68 @@ def softmax(arr):
     s = np.sum(np.exp(arr))
     return np.exp(arr)/s
 softmax(np.array([86.03331084, 37.7285648,  48.64908087, 87.16563062, 38.40852563, 37.20006318]))
+
+
+# Q-12: Vertical stack
+# Write a python function that accepts infinite number of numpy arrays and do the vertical stack to them. Then return that new array as result. The function only accepts the numpy array, otherwise raise error.
+
+#Coder here
+def vertical_stack(*args):
+    for i in args:
+        if type(i) != np.ndarray:
+            raise TypeError("Requires Numpy Array")
+    return np.vstack(args)
+
+a = np.arange(10).reshape(2, -1)
+print("a=",a)
+b = np.repeat(1, 10).reshape(2, -1)
+print("b=",b)
+print(vertical_stack(a,b))
+c = np.random.random((2,5))
+print("c=", c)
+vertical_stack(a,b,c)
+
+# Create a python function named date_array that accepts two dates as string format and returns a numpy array of dates between those 2 dates. The function only accept 2 strings, otherwise raise error. The date format should be like this only: 2022-12-6. The end date should be included and for simplicity, choose dates from a same year.
+def date_array(start, end):
+
+    if type(start) != str or type(end) != str:
+        raise TypeError("Requires 2 strings")
+
+    return np.arange(start, end, dtype='datetime64[D]')
+date=date_array('2022-12-6', '2022-12-10')
+
+# Q-17: Given two arrays of same shape make an array of max out of two arrays. (Numpy way)
+a = np.array([[1, 5, 3],
+              [7, 2, 6]])
+
+b = np.array([[4, 2, 8],
+              [3, 9, 1]])
+
+def maximum(a, b):
+    ans = np.where(a > b, a, b)
+    return ans
+
+print(maximum(a, b))
+
+# OR
+a[b>a] = b[a<b]
+
+
+
+# -18 Answer below asked questions on given array:
+# Fetch Every alternate column of the array
+# Normalise the given array
+# https://en.wikipedia.org/wiki/Normalization_(statistics)
+
+# There are different form of normalisation for this question use below formula.
+
+# Xnormalized=X−XminXmax−Xmin
+
+arr1=np.random.randint(low=1, high=10000, size=40).reshape(8,5)
+arr1=arr1[:, ::2]
+def normalise(arr):
+    arr_min = np.min(arr)
+    arr_max = np.max(arr)
+    return (arr - arr_min) / (arr_max - arr_min)
+
+print(normalise(arr1))
