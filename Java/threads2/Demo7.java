@@ -23,13 +23,16 @@ public class Demo7 {
 
         Thread t1 = new Thread(obj1);
         Thread t2 = new Thread(obj2);
+         t1.setPriority(10);
+         t2.setPriority(1);
 
         t1.start();
         t2.start();
 
-        t1.setPriority(10);
+       
 
         System.out.println(t1.getPriority());
+        System.out.println(t2.getPriority());
     }
 }
 
